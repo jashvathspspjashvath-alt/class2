@@ -1,0 +1,76 @@
+"InstallScript"
+{
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Activision\\Modern Warfare 3"
+		{
+			"string"
+			{
+				"InstallPath"		"%INSTALLDIR%"
+				"Version"		"1.0"
+				"MPExePath"		"%INSTALLDIR%\\iw5mp.exe"
+				"SPExePath"		"%INSTALLDIR%\\iw5sp.exe"
+				"DSExePath"		"%INSTALLDIR%\\iw5mp_server.exe"
+			}
+		}
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Activision\\Modern Warfare 3"
+		{
+			"string"
+			{
+				"english"
+				{
+					"Language"		"ENU"
+				}
+				"french"
+				{
+					"Language"		"FRA"
+				}
+				"italian"
+				{
+					"Language"		"ITA"
+				}
+				"german"
+				{
+					"Language"		"DEU"
+				}
+				"spanish"
+				{
+					"Language"		"ESP"
+				}
+				"russian"
+				{
+					"Language"		"RUS"
+				}
+				"polish"
+				{
+					"Language"		"PLK"
+				}
+				"japanese"
+				{
+					"Language"		"JPN"
+				}
+			}
+		}
+	}
+	"Run Process"
+	{
+		"VCRedist"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Valve\\Steam\\Apps\\42680"
+			"process 1"		"%INSTALLDIR%\\Redist\\vcredist_x86.exe"
+			"command 1"		"/q:a"
+			"NoCleanUp"		"1"
+		}
+		"DirectX"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\Software\\Valve\\Steam\\Apps\\42680"
+			"process 1"		"%INSTALLDIR%\\Redist\\DirectX\\dxsetup.exe"
+			"command 1"		"/silent"
+			"NoCleanUp"		"1"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"a1ef2b209c5e47d834e84d6f839392e6260a7088780eb786d8dd324f4da680a5b7831b7afd90be1a35e0278be6bdf127038ced099896dbe22b9dde0df1c19033137468010bb1b4f9fe407d3772128b7790a2ce6cddbdd89cabd09b473d92fe80959c10f7e49b22d6e108b6d26ad6267674a5b36c9d36f726ba74de9a1eaba05f"
+}
